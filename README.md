@@ -35,13 +35,6 @@ The indices align.  In other words, `dates[0]` holds the timestamp for `measurem
 len(dates) == len(measurements)
 ```
 
-
-
-
-    True
-
-
-
 The short-term standard (24-hour or daily average) is 35 micrograms per cubic meter of air (µg/m3) 
 [source](https://www.health.ny.gov/environmental/indoors/air/pmq_a.htm)
 
@@ -63,7 +56,7 @@ The short-term standard (24-hour or daily average) is 35 micrograms per cubic me
 
 ```python
 # Your answer here
-max_pm = None
+max_pm25 = None
 ```
 
 
@@ -74,9 +67,6 @@ assert(max_pm25==max(measurements))
 # If you assigned the incorrect value to the max_pm variable, you will receive an error message
 print('Correct')
 ```
-
-    Correct
-
 
 # Task 3
 
@@ -97,9 +87,6 @@ assert(min_pm25 == min(measurements))
 print('Correct')
 ```
 
-    Correct
-
-
 # Task 4
 
 Each date in the dates list is a Timestamp object.
@@ -108,13 +95,6 @@ Each date in the dates list is a Timestamp object.
 ```python
 type(dates[0])
 ```
-
-
-
-
-    pandas._libs.tslibs.timestamps.Timestamp
-
-
 
 For each date, we can find the day of the week by calling the method day_name like so:
 
@@ -135,9 +115,6 @@ assert(day_of_week[0] == 'Thursday')
 print('Correct')
 ```
 
-    Correct
-
-
 # Task 5
 
 The `zip` built-in function allows us to iterate through two lists at the same time. 
@@ -146,23 +123,6 @@ The `zip` built-in function allows us to iterate through two lists at the same t
 ```python
 zip?
 ```
-
-
-    [0;31mInit signature:[0m [0mzip[0m[0;34m([0m[0mself[0m[0;34m,[0m [0;34m/[0m[0;34m,[0m [0;34m*[0m[0margs[0m[0;34m,[0m [0;34m**[0m[0mkwargs[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-    [0;31mDocstring:[0m     
-    zip(*iterables) --> A zip object yielding tuples until an input is exhausted.
-    
-       >>> list(zip('abcdefg', range(3), range(4)))
-       [('a', 0, 0), ('b', 1, 1), ('c', 2, 2)]
-    
-    The zip object yields n-length tuples, where n is the number of iterables
-    passed as positional arguments to zip().  The i-th element in every tuple
-    comes from the i-th iterable argument to zip().  This continues until the
-    shortest argument is exhausted.
-    [0;31mType:[0m           type
-    [0;31mSubclasses:[0m     
-
-
 
 Using a for loop and zip, create a dictionary using a for loop whose key is the date and value is the pm25 measurement.
 
@@ -180,9 +140,6 @@ date_measurement = None
 assert(date_measurement[list(date_measurement.keys())[0]] == 1.6)
 print('Correct')
 ```
-
-    Correct
-
 
 # Task 6
 Find the average reading on each day of the week using whatever technique you care to choose.
@@ -211,9 +168,6 @@ airquality_sorted = None
 assert(list(airquality_sorted.values())) == [55.4, 54.7, 53.3, 47.5, 44]
 print('Correct')
 ```
-
-    Correct
-
 
 
 ```python
